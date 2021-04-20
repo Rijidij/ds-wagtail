@@ -71,7 +71,7 @@ container to communicate with those services.
 
 <http://127.0.0.1:8000>
 
-*Note: compiled CSS is not included and therefore needs to be built initially, and after each git pull. See the "Working with SASS/CSS section*
+**Note: compiled CSS is not included and therefore needs to be built initially, and after each git pull. See the "Working with SASS/CSS section**
 
 ##### Access site admin
 
