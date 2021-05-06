@@ -8,5 +8,5 @@ class BasicRichTextBlock(blocks.RichTextBlock):
         self.features = BASIC_RICH_TEXT_FEATURES
 
     class Meta:
-        template = "text_formats/blocks/paragraph.html"
         icon = "fa-paragraph"
+        template = "text_formats/blocks/paragraph.html"

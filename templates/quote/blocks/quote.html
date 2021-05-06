@@ -1,0 +1,20 @@
+<!--
+  This is an example template.
+  Please modify as required and remove this comment.
+-->
+
+{% load wagtailimages_tags %}
+
+<blockquote class='c-quote'>
+  {% image value.image fill-300x300 as quote_image %}
+  {% if quote_image %}
+    <figure class='c-quote__image'>
+      {% image value.image fill-300x300 as quote_image %}
+      <img src="{{ quote_image.url }}" alt="" />
+    </figure>
+  {% endif %}
+  <p class='c-quote__body'>{{ value.quote }}</p>
+  <footer class='c-quote__meta'>
+      <cite>{{ value.attribution }}</cite>
+  </footer>
+</blockquote>
