@@ -1,5 +1,7 @@
 {% load static %}
+{% load alert_tags %}
 <header class="tna-header tna-bg--dark">
+    <strong>>>> HEADER >>></strong>
     <div class="container">
         <div class="row">
             <div class="col-3">
@@ -7,6 +9,9 @@
                     <img src="{% static 'images/tna-wh-logo.svg' %}" class="img-fluid tna-header__logo" alt="The National Archives">
                 </a>
             </div>
+            <h1>{{ page.title }}</h1>
         </div>
     </div>
+    {% alerts %}
+    <strong><<< HEADER <<<</strong>
 </header>
