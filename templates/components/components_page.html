@@ -25,12 +25,14 @@
     {% endif %}
 
     {% for alert_placement in page.alert_placements.all %}
-      <div>
-        <h3>
-          Alert placement: {{ alert_placement.alert.title }}
-        </h3>
-        {{ alert_placement.alert.message|richtext }}
-      </div>
+      {% if alert_placement.alert.active %}
+        <div>
+          <h3>
+            Alert placement: {{ alert_placement.alert.title }}
+          </h3>
+          {{ alert_placement.alert.message|richtext }}
+        </div>
+      {% endif %}
     {% endfor %}
 
     <div>
