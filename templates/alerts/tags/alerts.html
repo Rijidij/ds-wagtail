@@ -1,0 +1,8 @@
+{% load wagtailcore_tags %}
+
+{% for alert in alerts %}
+    <h3>{{ alert.title }}</h3>
+    <p>
+        {{ alert.message|richtext }}
+    </p>
+{% endfor %}
