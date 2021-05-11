@@ -4,8 +4,9 @@ from ..models import Alert
 register = template.Library()
 
 # Alert snippets
-@register.inclusion_tag('alerts/tags/alerts.html', takes_context=True)
-def alerts(context):
+
+@register.inclusion_tag('alerts/tags/all_alerts.html', takes_context=True)
+def all_alerts(context):
     """
     Return all active alert snippets.
     Using this tag in the header template would be one way of displaying global alerts.

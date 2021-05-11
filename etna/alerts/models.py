@@ -11,11 +11,13 @@ class Alert(models.Model):
     title = models.CharField(max_length=100)
     message = BasicRichTextField()
     active = models.BooleanField(default=False)
+    cascade = models.BooleanField(default=False, verbose_name='Display on child pages')
 
     panels = [
         FieldPanel('title'),
         FieldPanel('message'),
-        FieldPanel('active')
+        FieldPanel('active'),
+        FieldPanel('cascade'),
     ]
 
     def __str__(self):
