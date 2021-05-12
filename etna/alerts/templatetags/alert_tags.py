@@ -19,7 +19,10 @@ def get_body_region_alert(page):
     except AttributeError:
         pass
 
-    return alert
+    if alert and alert.active:
+        return alert
+    else:
+        return None
 
 
 @register.inclusion_tag('alerts/tags/alerts.html', takes_context=True)
