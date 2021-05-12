@@ -6,24 +6,19 @@
 
 {% load static %}
 {% load wagtailcore_tags %}
+{% load alert_tags breadcrumbs_tags %}
 
 {% block body_class %}template-componentspage{% endblock %}
 
-{% block extra_css %}
+{% block extra_css %}{% endblock extra_css %}
 
-{% endblock extra_css %}
+{% block alerts %}{% alerts %}{% endblock alerts %}
+
+{% block breadcrumbs %}{% breadcrumbs %}{% endblock breadcrumbs %}
 
 {% block content %}
-  <strong>>>> CONTENT >>></strong>
-    {% if page.body_region_alert %}
-      <div>
-        <h3>
-          Body region alert: {{ page.body_region_alert.title }}
-        </h3>
-        {{ page.body_region_alert.message|richtext }}
-      </div>
-    {% endif %}
 
+    <!-- Multiple alerts on page
     {% for alert_placement in page.alert_placements.all %}
       {% if alert_placement.alert.active %}
         <div>
@@ -34,9 +29,10 @@
         </div>
       {% endif %}
     {% endfor %}
+    -->
 
     <div>
       {{ page.content }}
     </div>
-  <strong><<< CONTENT <<<</strong>
+
 {% endblock content %}

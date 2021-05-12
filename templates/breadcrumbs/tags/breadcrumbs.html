@@ -1,0 +1,14 @@
+{% load wagtailcore_tags %}
+
+{% if items %}
+    <div>
+        <ul>
+            {% for item in items %}
+                <li>
+                    <a href="{% pageurl item %}">{{ item.title|truncatechars:70 }}</a>
+                </li>
+            {% endfor %}
+            <li>{{ page.title|truncatechars:70 }}</li>
+        </ul>
+    </div>
+{% endif %}

@@ -36,8 +36,19 @@
 
 {% include 'includes/header.html' %}
 
+<hr>
 <main>
     <div class="container">
+        <div class="row">
+            <div class="col-md-10" id="alerts">
+                {% block alerts %}{% endblock %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10" id="breadcrumbs">
+                {% block breadcrumbs %}{% endblock %}
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-10" id="content">
                 {% block content %}{% endblock %}
@@ -45,6 +56,7 @@
         </div>
     </div>
 </main>
+<hr>
 
 {% include 'includes/footer.html' %}
 

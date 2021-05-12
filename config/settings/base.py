@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'etna.text_formats',
     'etna.quotes',
     'etna.alerts',
+    'etna.breadcrumbs',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
