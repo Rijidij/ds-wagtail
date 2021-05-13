@@ -1,0 +1,16 @@
+<!--
+  This is an example template.
+  Please modify as required and remove this comment.
+-->
+
+{% load wagtailcore_tags %}
+
+<div class="jumplink-wrapper-block">
+    {% if value.jumplink %}
+        {% include_block value.jumplink %}
+    {% endif %}
+
+    {% if value.block %}
+        {% include_block value.block %}
+    {% endif %}
+</div>

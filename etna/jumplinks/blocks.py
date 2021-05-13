@@ -13,23 +13,23 @@ class JumplinkBlock(blocks.StructBlock):
         template = 'jumplinks/blocks/jumplink.html'
 
 
+# Create "wrappers" for streamfield blocks with a jumplink.
+
 class JumplinkQuoteBlock(blocks.StructBlock):
-    label = blocks.CharBlock(required=False, max_length=80, label='Jumplink label')
-    anchor = blocks.CharBlock(required=False, max_length=80, label='Jumplink anchor')
     block = QuoteBlock()
+    jumplink = JumplinkBlock()
 
     class Meta:
         icon = 'openquote'
         label = 'Jumplink Quote'
-        template = 'jumplinks/blocks/jumplink.html'
+        template = 'jumplinks/blocks/jumplink_wrapper.html'
 
 
 class JumplinkParagraphBlock(blocks.StructBlock):
-    label = blocks.CharBlock(required=False, max_length=80, label='Jumplink label')
-    anchor = blocks.CharBlock(required=False, max_length=80, label='Jumplink anchor')
     block = blocks.RichTextBlock(label='Paragraph')
+    jumplink = JumplinkBlock()
 
     class Meta:
-        icon = 'paragraph'
+        icon = 'pilcrow'
         label = 'Jumplink Paragraph'
-        template = 'jumplinks/blocks/jumplink.html'
+        template = 'jumplinks/blocks/jumplink_wrapper.html'

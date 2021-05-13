@@ -3,16 +3,8 @@
   Please modify as required and remove this comment.
 -->
 
-{% load wagtailcore_tags %}
-
-<div>
-    <div>
-        {{value.label }}
-    </div>
-    <div>
-        {{value.anchor }}
-    </div>
-    <div>
-        {% include_block value.block %}
-    </div>
+<div class="jumplink-block">
+    {% if value.label %}
+        <a class="jumplink">{% if value.anchor %}{{ value.anchor }}{% else %}{{ value.label }}{% endif %}</a>
+    {% endif %}
 </div>
