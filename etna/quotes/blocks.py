@@ -1,7 +1,6 @@
 from wagtail.core import blocks
 
 from ..text_formats.blocks import BasicRichTextBlock
-from ..jumplinks.blocks import JumplinkBlock
 
 class QuoteBlock(blocks.StructBlock):
     """
@@ -13,8 +12,6 @@ class QuoteBlock(blocks.StructBlock):
     # ToDo: make this a link
     citation = blocks.CharBlock(required=False, max_length=100)
     # ToDo: add taxonomy field
-
-    jumplink = JumplinkBlock()
 
     class Meta:
         icon = 'openquote'

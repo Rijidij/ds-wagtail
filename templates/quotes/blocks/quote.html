@@ -8,9 +8,6 @@
 
 <blockquote class='c-quote'>
   <h3>{{ value.title }}</h3>
-  {% if value.jumplink %}
-    {{ value.jumplink.label }} {{ value.jumplink.anchor }}
-  {% endif %}
   {% image value.image fill-300x300 as quote_image %}
   {% if quote_image %}
     <figure class='c-quote__image'>
