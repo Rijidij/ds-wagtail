@@ -3,11 +3,16 @@
   Please modify as required and remove this comment.
 -->
 
+{% load wagtailcore_tags %}
+
 <div>
     <div>
         {{value.label }}
     </div>
     <div>
         {{value.anchor }}
+    </div>
+    <div>
+        {% include_block value.block %}
     </div>
 </div>
