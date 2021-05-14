@@ -1,0 +1,17 @@
+{% load wagtailcore_tags %}
+
+<div class="jumplinks">
+    <ul class="jumplinks">
+        {% for jumplink in jumplinks %}
+            <li>
+                <a href="#{{ jumplink.label }}">
+                    {% if jumplink.anchor %}
+                        {{ jumplink.anchor }}
+                    {% else %}
+                        {{ jumplink.label }}
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

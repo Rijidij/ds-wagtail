@@ -6,7 +6,7 @@
 
 {% load static %}
 {% load wagtailcore_tags %}
-{% load alert_tags breadcrumbs_tags %}
+{% load alert_tags breadcrumbs_tags jumplinks_tags %}
 
 {% block body_class %}template-componentspage{% endblock %}
 
@@ -18,20 +18,8 @@
 
 {% block content %}
 
-    <!-- Multiple alerts on page
-    {% for alert_placement in page.alert_placements.all %}
-      {% if alert_placement.alert.active %}
-        <div>
-          <h3>
-            Alert placement: {{ alert_placement.alert.title }}
-          </h3>
-          {{ alert_placement.alert.message|richtext }}
-        </div>
-      {% endif %}
-    {% endfor %}
-    -->
-
     <div>
+      {% jumplinks page=page %}
       {{ page.content }}
     </div>
 

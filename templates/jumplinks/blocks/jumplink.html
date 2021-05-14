@@ -5,6 +5,6 @@
 
 <div class="jumplink-block">
     {% if value.label %}
-        <a class="jumplink">{% if value.anchor %}{{ value.anchor }}{% else %}{{ value.label }}{% endif %}</a>
+        <a class="jumplink" name="{{ value.label }}">{{ value.label }}</a>
     {% endif %}
 </div>
