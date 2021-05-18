@@ -4,7 +4,6 @@ from django.utils.functional import cached_property
 from wagtail.core import blocks
 
 from ..quotes.blocks import QuoteBlock
-from .widgets import JumplinkWidget
 
 
 class JumplinkBlock(blocks.StructBlock):
