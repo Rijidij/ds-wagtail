@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'etna.home',
     'etna.search',
     'etna.text_formats',
+    'etna.media_embed',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'wagtail.admin',
     'wagtail.core',
 
+    'wagtailmedia',
     'modelcluster',
     'taggit',
 

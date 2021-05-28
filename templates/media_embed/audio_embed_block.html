@@ -1,0 +1,24 @@
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% with snippet=self.snippet media=self.snippet.media %}
+<section>
+    <h2>{{ snippet.title }}</h2>
+    <div>
+        {{ snippet.intro|richtext }}
+    </div>
+    <div>
+        Title: {{ media.title }}</br>
+        Type: {{ media.type }}</br>
+        URL: {{ media.url }}</br>
+    </div>
+    <div>
+        <audio
+            controls
+            src="{{ media.url }}">
+                Your browser does not support the
+                <code>audio</code> element.
+        </audio>
+    </div>
+</section>
+{% endwith %}
