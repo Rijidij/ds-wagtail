@@ -1,0 +1,69 @@
+<section class='c-footer__block c-footer__block--communication'>
+    <ul class='u-list-reset | c-social-pages'>
+        {% if twitter_url %}
+        <li class='c-social-pages__item'>
+            <a class='c-social-pages__link' href="{{ twitter_url }}" target="_blank" rel="noopener noreferrer">
+                <svg class='c-icon'>
+                    <title>Find us on Twitter</title>
+                    <use xlink:href='#icon-twitter'></use>
+                </svg>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if youtube_url %}
+        <li class='c-social-pages__item'>
+            <a class='c-social-pages__link' href="{{ youtube_url }}" target="_blank" rel="noopener noreferrer">
+                <svg class='c-icon'>
+                    <title>Find us on Youtube</title>
+                    <use xlink:href='#icon-youtube'></use>
+                </svg>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if linkedin_url %}
+        <li class='c-social-pages__item'>
+            <a class='c-social-pages__link' href="{{ linkedin_url }}" target="_blank" rel="noopener noreferrer">
+                <svg class='c-icon'>
+                    <title>Find us on LinkedIn</title>
+                    <use xlink:href='#icon-linkedin'></use>
+                </svg>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if facebook_url %}
+        <li class='c-social-pages__item'>
+            <a class='c-social-pages__link' href="{{ facebook_url }}" target="_blank" rel="noopener noreferrer">
+                <svg class='c-icon'>
+                    <title>Find us on Facebook</title>
+                    <use xlink:href='#icon-facebook'></use>
+                </svg>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if instagram_url %}
+        <li class='c-social-pages__item'>
+            <a class='c-social-pages__link' href="{{ instagram_url }}" target="_blank" rel="nopener noreferrer">
+                <svg class='c-icon'>
+                    <title>Find us on Instagram</title>
+                    <use xlink:href='#icon-instagram'></use>
+                </svg>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if rss_url %}
+        <li class='c-social-pages__item'>
+            <a class='c-social-pages__link' href="{{ rss_url }}" target="_blank" rel="nopener noreferrer">
+                <svg class='c-icon'>
+                    <title>Subscribe to our RSS feed</title>
+                    <use xlink:href='#icon-instagram'></use>
+                </svg>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</section>
