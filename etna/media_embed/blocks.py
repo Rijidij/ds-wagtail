@@ -1,10 +1,10 @@
 from wagtail.core import blocks
 from wagtail.snippets.blocks import SnippetChooserBlock
 
-class AudioEmbedBlock(blocks.StructBlock):
-    snippet = SnippetChooserBlock('media_embed.AudioEmbed')
+class MediaEmbedBlock(blocks.StructBlock):
+    snippet = SnippetChooserBlock('media_embed.MediaEmbed', label='Media embed item')
 
     class Meta:
-        label = 'Audio embed block'
+        label = 'Media embed block'
         icon = 'media'
-        template = 'audio_embed/blocks/audio_embed_block.html'
+        template = 'media_embed/blocks/media_embed_block.html'

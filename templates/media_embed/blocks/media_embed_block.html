@@ -1,7 +1,7 @@
 {% load wagtailcore_tags %}
 {% load wagtailimages_tags %}
 
-{% with snippet=self.snippet media=self.snippet.media %}
+{% with snippet=self.snippet media=self.snippet.media_embed %}
 <section>
     <h2>{{ snippet.title }}</h2>
     <div>
@@ -13,12 +13,19 @@
         URL: {{ media.url }}</br>
     </div>
     <div>
+        {% if media.type == "audio" %}
         <audio
             controls
             src="{{ media.url }}">
-                Your browser does not support the
-                <code>audio</code> element.
+                Your browser does not support the <code>audio</code> element.
         </audio>
+        {% elif  media.type == "video" %}
+        <video
+            controls
+            src="{{ media.url }}">
+            Your browser does not support the <code>video</code> element.
+        </video>
+        {% endif %}
     </div>
 </section>
 {% endwith %}

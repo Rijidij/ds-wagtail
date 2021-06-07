@@ -8,26 +8,25 @@ from ..text_formats.fields import BasicRichTextField
 
 
 @register_snippet
-class AudioEmbed(models.Model):
+class MediaEmbed(models.Model):
     title = models.CharField(max_length=255)
     intro = BasicRichTextField(blank=True)
-    audio_media = models.ForeignKey(
+    media_embed = models.ForeignKey(
         'wagtailmedia.Media',
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
-        related_name='+',
-        limit_choices_to={'type': 'audio'}
-    )
+        related_name='+'
+        )
 
     panels = [
         FieldPanel('title'),
         RichTextFieldPanel('intro'),
-        MediaChooserPanel('audio_media'),
+        MediaChooserPanel('media_embed'),
     ]
 
     def __str__(self):
         return self.title
 
     class Meta:
-        verbose_name_plural = 'Audio embeds'
+        verbose_name_plural = 'Media embeds'

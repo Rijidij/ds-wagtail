@@ -1,7 +1,21 @@
 from django.db import models
 
+from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
+from wagtail.admin.edit_handlers import StreamFieldPanel
 
+from ..media_embed.blocks import MediaEmbedBlock
 
 class HomePage(Page):
-    pass
+    content = StreamField(
+        [
+            ('media_embed_block', MediaEmbedBlock()),
+        ],
+        null=True,
+        blank=True,
+    )
+
+    content_panels = Page.content_panels + [
+        StreamFieldPanel('content'),
+    ]
+
