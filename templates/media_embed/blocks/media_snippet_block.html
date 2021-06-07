@@ -1,10 +1,11 @@
 {% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
 
-{% with media=self.media_embed %}
+{% with snippet=self.snippet media=self.snippet.media_embed %}
 <section>
-    <h2>{{ self.title }}</h2>
+    <h2>{{ snippet.title }}</h2>
     <div>
-        {{ self.intro|richtext }}
+        {{ snippet.intro|richtext }}
     </div>
     <div>
         Title: {{ media.title }}</br>

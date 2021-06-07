@@ -8,7 +8,7 @@ from ..text_formats.fields import BasicRichTextField
 
 
 @register_snippet
-class MediaEmbed(models.Model):
+class MediaSnippet(models.Model):
     title = models.CharField(max_length=255)
     intro = BasicRichTextField(blank=True)
     media_embed = models.ForeignKey(
@@ -29,4 +29,4 @@ class MediaEmbed(models.Model):
         return self.title
 
     class Meta:
-        verbose_name_plural = 'Media embeds'
+        verbose_name_plural = 'Media snippets'
