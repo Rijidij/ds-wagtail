@@ -2,18 +2,28 @@
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <title>
-        {% block title %}
-            {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+                {% with self.get_site.site_name as site_name %}
+                    {% if site_name %}- {{ site_name }}{% endif %}
+                {% endwith %}
+            {% endblock %}
+        </title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/libraries/tna-toolkit.0.0.1.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/dist/etna.css' %}">
+
+        {% block extra_css %}
+            {# Override this in templates to add extra stylesheets #}
         {% endblock %}
-        {% block title_suffix %}
-            {% with self.get_site.site_name as site_name %}
-                {% if site_name %}- {{ site_name }}{% endif %}
-            {% endwith %}
-        {% endblock %}
-    </title>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
@@ -21,14 +31,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
           rel="stylesheet">
-
-    {# Global stylesheets #}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/libraries/tna-toolkit.0.0.1.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/dist/etna.css' %}">
-
-    {% block extra_css %}
-        {# Override this in templates to add extra stylesheets #}
-    {% endblock %}
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
@@ -36,32 +38,11 @@
 
 {% include 'includes/header.html' %}
 
-<hr> {# DEBUG: Remove before flight #}
-<main>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10" id="alerts">
-                {% block alerts %}{% endblock %}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-10" id="breadcrumbs">
-                {% block breadcrumbs %}{% endblock %}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-10" id="content">
-                {% block content %}{% endblock %}
-            </div>
-        </div>
-    </div>
+<main id="maincontent">
+    {% block content %}{% endblock %}
 </main>
-<hr> {# DEBUG: Remove before flight #}
 
 {% include 'includes/footer.html' %}
-
-{# Global javascript #}
-<script type="text/javascript" src="{% static 'js/etna.js' %}"></script>
 
 {% block extra_js %}
     {# Override this in templates to add extra javascript #}
