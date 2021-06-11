@@ -1,0 +1,15 @@
+<div class="embed-responsive embed-responsive-16by9">
+    <h3>
+        {% if title %}
+            {{ title }}
+        {% else %}
+            {{ embed.title }}
+        {% endif %}
+    </h3>
+    {% if description %}
+        <div>
+            {{ description }}
+        </div>
+    {% endif %}
+    <iframe width=800 height=450 class="embed-responsive-item" src="{{ embediframesrc }}" allowfullscreen></iframe>
+</div>

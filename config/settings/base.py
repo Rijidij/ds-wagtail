@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'etna.home',
     'etna.search',
     'etna.streams',
+    'etna.text_formats',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',

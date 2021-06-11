@@ -1,0 +1,22 @@
+{% comment "Filter method" %}
+  Wagtail's {% embed %} tag returns HTML containing an iframe.
+  The "embediframesrc" filter retrieves the src attribute from this object, allowing
+  us to create our own iframe with full control over width, height, class, etc.
+
+
+  {% load streams_extras %}
+
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe width=800 height=450 class="embed-responsive-item" src="{{ self.share.url|embediframesrc }}" allowfullscreen></iframe>
+  </div>
+
+{% endcomment %}
+
+
+{% comment "Template tag method" %}
+  Get a Wagtail embed object and choose which elements to render in the tag template.
+{% endcomment %}
+
+  {% load streams_tags %}
+
+  {% streamembed self.share.url self.title self.description %}
