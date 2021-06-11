@@ -4,9 +4,8 @@ The "embediframesrc" filter retrieves the src attribute from this object, allowi
 us to create our own iframe with full control over width, height, class, etc.
 {% endcomment %}
 
-
 {% load streams_extras %}
 
 <div class="embed-responsive embed-responsive-16by9">
-  <iframe width=800 height=450 class="embed-responsive-item" src="{{ self.share.url|embediframesrc }}" allowfullscreen></iframe>
+    <iframe width=800 height=450 class="embed-responsive-item" src="{{ self.share.url|embediframesrc }}" allowfullscreen></iframe>
 </div>
