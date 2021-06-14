@@ -12,6 +12,7 @@ wagtail = "^2.12.3"
 psycopg2 = "^2.8.6"
 platformshconfig = "^2.4.0"
 beautifulsoup4 = "^4.9.3"
+wagtailfontawesome = "^1.2.1"
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"

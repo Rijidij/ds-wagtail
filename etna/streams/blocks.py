@@ -13,5 +13,5 @@ class StreamEmbedBlock(blocks.StructBlock):
 
     class Meta:
         template = "streams/blocks/stream-embed-block.html"
-        icon = "media"
+        icon = "fa-cloud-download"
         label = "Streaming media player"

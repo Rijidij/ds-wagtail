@@ -645,6 +645,18 @@ docs = ["pyenchant (>=3.1.1,<4)", "sphinxcontrib-spelling (>=5.4.0,<6)", "Sphinx
 testing = ["python-dateutil (>=2.2)", "pytz (>=2014.7)", "elasticsearch (>=5.0,<6.0)", "Jinja2 (>=2.11,<3.0)", "boto3 (>=1.16,<1.17)", "freezegun (>=0.3.8)", "openpyxl (>=2.6.4)", "Unidecode (>=0.04.14,<2.0)", "coverage (>=3.7.0)", "flake8 (>=3.6.0)", "isort (==5.6.4)", "flake8-blind-except (==0.1.1)", "flake8-print (==2.0.2)", "doc8 (==0.8.1)", "jinjalint (>=0.5)", "docutils (==0.15)", "django-taggit (>=1.3.0,<2.0)"]
 
 [[package]]
+name = "wagtailfontawesome"
+version = "1.2.1"
+description = "Add FontAwesome icons to StreamField."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Django = ">=1.7.1"
+wagtail = ">=1.4.0"
+
+[[package]]
 name = "wcwidth"
 version = "0.2.5"
 description = "Measures the displayed width of unicode strings in a terminal"
@@ -700,7 +712,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "dfb62bd058c01582f643d4cae7a2ceb0c839a82bfd43a8816acdc60d485c344b"
+content-hash = "b3ae56870e373749de5451f719ad1b70ed07d831012a8c1b297d74394644ca90"
 
 [metadata.files]
 anyascii = [
@@ -1036,6 +1048,10 @@ urllib3 = [
 wagtail = [
     {file = "wagtail-2.13.1-py3-none-any.whl", hash = "sha256:8ecac8cc175b02c446f37fe5f649bd5002953c0e3a6774c27ed468407950d720"},
     {file = "wagtail-2.13.1.tar.gz", hash = "sha256:588a613566e51b9e75a5ee4f3d73a5e3b2b684e25251d701883415ceb9b49e42"},
+]
+wagtailfontawesome = [
+    {file = "wagtailfontawesome-1.2.1-py2.py3-none-any.whl", hash = "sha256:76b1c64c4f1042d468a83e4352f74b57bda4a4aa09cdfeeb8663dead5ed632be"},
+    {file = "wagtailfontawesome-1.2.1.tar.gz", hash = "sha256:6c1bd2d6061880848de6374ceb75d38a8c9b0debb1d4aef8a2fdc9d565a8f417"},
 ]
 wcwidth = [
     {file = "wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784"},
