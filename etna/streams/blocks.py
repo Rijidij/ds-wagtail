@@ -9,7 +9,7 @@ class StreamEmbedBlock(blocks.StructBlock):
 
     share = EmbedBlock(label="Share link")
     title = blocks.TextBlock(required=False, max_length=100)
-    description = BasicRichTextBlock(required=False)
+    summary = BasicRichTextBlock(required=False)
 
     class Meta:
         template = "streams/blocks/stream-embed-block.html"

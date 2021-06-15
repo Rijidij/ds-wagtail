@@ -25,7 +25,7 @@ def embed_tag(context):
             # optional title
             'title': context['self']['title'],
             # optional description
-            'description': context['self']['description'],
+            'summary': context['self']['summary'],
         }
     except EmbedException:
         return None
